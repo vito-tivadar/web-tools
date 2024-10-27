@@ -29,29 +29,26 @@ const getScreenSize = function () {
       height: screenHeight,
       formatted: `${screenWidth}×${screenHeight}`,
     },
+    // + 2 is for border
     viewport: {
-      width: v.clientWidth,
-      height: v.clientHeight,
-      formatted: `${v.clientWidth}×${v.clientHeight}`,
+      width: v.clientWidth + 2,
+      height: v.clientHeight + 2,
+      formatted: `${v.clientWidth + 2}×${v.clientHeight + 2}`,
     },
     dynamicViewport: {
-      width: dv.clientWidth,
-      height: dv.clientHeight,
-      formatted: `${dv.clientWidth}×${dv.clientHeight}`,
+      width: dv.clientWidth + 2,
+      height: dv.clientHeight + 2,
+      formatted: `${dv.clientWidth + 2}×${dv.clientHeight + 2}`,
     },
   };
 };
 
 const copyJson = function () {
-  try {
-    let size = getScreenSize();
+  let size = getScreenSize();
 
-    let json = JSON.stringify(size);
-    console.log(json);
-    navigator.clipboard.writeText(json);
-  } catch (error) {
-    alert(error);
-  }
+  let json = JSON.stringify(size, null, 2);
+  console.log(json);
+  navigator.clipboard.writeText(json);
 };
 
 displaySize();
