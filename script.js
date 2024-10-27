@@ -44,15 +44,11 @@ const getScreenSize = function () {
 };
 
 const copyJson = function () {
-  try {
-    let size = getScreenSize();
+  let size = getScreenSize();
 
-    let json = JSON.stringify(size);
-    console.log(json);
-    navigator.clipboard.writeText(json);
-  } catch (error) {
-    alert(error);
-  }
+  let json = JSON.stringify(size, null, 2);
+  console.log(json);
+  navigator.clipboard.writeText(json);
 };
 
 displaySize();
