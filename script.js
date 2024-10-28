@@ -46,6 +46,8 @@ const getScreenSize = function () {
 const copyJson = function () {
   let size = getScreenSize();
 
+  size.userAgent = navigator.userAgent;
+
   let json = JSON.stringify(size, null, 2);
   console.log(json);
   navigator.clipboard.writeText(json);
