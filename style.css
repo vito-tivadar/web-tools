@@ -43,7 +43,7 @@ button:active {
 
   background-image: url('assets/v-background.png');
   background-repeat: repeat;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 .container-dynamic-viewport {
@@ -55,7 +55,7 @@ button:active {
 
   background-image: url('assets/vd-background.png');
   background-repeat: repeat;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 .container-display {
